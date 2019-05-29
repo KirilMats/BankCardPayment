@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>BankPayment</title>
+    <link rel="stylesheet" href="bankPayment.css">
+</head>
+<body>
+    <div class="card-payment">
+        <div class="card-front">
+            <img class="bank-logo" src="" alt="">
+            <input class="card-number" required type="text" maxlength="19" placeholder="xxxx-xxxx-xxxx-xxxx" title="Please enter your card number">
+            <p>Due date:</p>
+            <div class="expiration-date">
+                <input class="expiration-date-month" required oninput="this.value = this.value.replace(/[^0-9.]/g, '');"  type="text" maxlength="2" pattern="\d*" placeholder="MM" title="Please enter your card expiration date (month)"></input>
+                <input class="expiration-date-year" required oninput="this.value = this.value.replace(/[^0-9.]/g, '');"  type="text" maxlength="2" pattern="\d*" placeholder="YY" title="Please enter your card expiration date (year)"></input>
+                <img class="brand-logo" src="" alt="">
+            </div>
+        </div>
+        <div class="card-back">
+            <div class="grey-stripe"></div>
+            <p>CVV:</p>
+            <input class="cvv" required oninput="this.value = this.value.replace(/[^0-9.]/g, '');"  type="text" minlength="3" maxlength="3" pattern="\d*" placeholder="xxx" title="Please enter your CVV"></input>
+        </div>
+    </div>
+
+    <script type="text/javascript" src="./node_modules/card-info/dist/card-info.min.js"></script>
+    <script type="text/javascript" src="./bankPayment.js"></script>
+</body>
+</html>

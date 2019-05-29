@@ -1,0 +1,14 @@
+{
+  "name": "bankpaymentmodule",
+  "version": "1.0.0",
+  "description": "",
+  "main": "bankPayment.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "KirilMats",
+  "license": "ISC",
+  "dependencies": {
+    "card-info": "^1.2.4"
+  }
+}
